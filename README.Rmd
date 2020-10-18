@@ -1,0 +1,43 @@
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r  include=FALSE }
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "50%"
+)
+```
+
+# Fractals in R
+
+<!-- badges: start -->
+  [![travis](https://travis-ci.com/kkholst/fractalr.svg?branch=master)](https://travis-ci.com/kkholst/fractalr)
+  [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+<!-- badges: end -->
+
+
+## Installation
+
+```{r  install, eval=FALSE }
+remotes::install_github("kkholst/fractalr")
+```
+
+## Examples
+
+To start the user interface:
+```{r  ui, eval=FALSE }
+fraftalr::ui()
+```
+This wiil bring up a browser window with the shiny application.
+
+
+```{r ex1 }
+res <- fractalr:::.mandelbrot(cx=-0.7367, cy=0.1692, R=0.001, maxIter=500)
+image(res, useRaster=TRUE, axes=FALSE)
+```
+
+```{r ex2 }
+res <- fractalr:::.julia(cx=0, cy=0, R=2, c=complex(1,-.79,0.15))
+image(res, useRaster=TRUE, axes=FALSE, col=viridis::plasma(128, direction=-1))
+```
