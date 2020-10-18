@@ -31,7 +31,7 @@ ui <- fluidPage(
             selectInput("color", "Color scheme",
                         choices=c("inferno", "plasma", "viridis",
                                   "heat", "topo", "rainbow")),
-            sliderInput("maxIter", "Iterations", min=10, max=2000, value=1000),
+            sliderInput("maxIter", "Iterations", min=10, max=20000, value=1000),
             sliderInput("lambda", "Zoom factor", min=-10, max=10, value=4),
             p(textOutput("info")),
             radioButtons("type", "Fractal", choices=c("Mandelbrot", "Julia")),
