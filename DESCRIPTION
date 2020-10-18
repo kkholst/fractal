@@ -1,0 +1,13 @@
+Package: fractal
+Type: Package
+Title: Visualize simple fractals
+Version: 0.1
+Date: 2020-10-18
+Author: Klaus K. Holst
+Maintainer: Klaus K. Holst <klaus@holst.it>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+Imports: Rcpp (>= 1.0.5), shiny, viridis
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.1.1
+Encoding: UTF-8
