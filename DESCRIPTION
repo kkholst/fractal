@@ -1,13 +1,16 @@
-Package: fractal
+Package: fractalr
 Type: Package
-Title: Visualize simple fractals
+Title: fractals in R
 Version: 0.1
 Date: 2020-10-18
 Author: Klaus K. Holst
 Maintainer: Klaus K. Holst <klaus@holst.it>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-Imports: Rcpp (>= 1.0.5), shiny, viridis
+Description: Visualize simple fractals in R
+URL: https://github.com/kkholst/fractalr
+BugReports: https://github.com/kkholst/fractalr/issues
+License: Apache License (== 2.0)
+Imports: Rcpp (>= 1.0), shiny, viridis
+Suggests: testthat (>= 0.11)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.1.1
 Encoding: UTF-8

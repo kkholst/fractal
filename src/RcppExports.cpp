@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // mandelbrot
 Rcpp::List mandelbrot(unsigned dim, unsigned maxIter, long double R, long double cx, long double cy, double exponent, double escape);
-RcppExport SEXP _fractal_mandelbrot(SEXP dimSEXP, SEXP maxIterSEXP, SEXP RSEXP, SEXP cxSEXP, SEXP cySEXP, SEXP exponentSEXP, SEXP escapeSEXP) {
+RcppExport SEXP _fractalr_mandelbrot(SEXP dimSEXP, SEXP maxIterSEXP, SEXP RSEXP, SEXP cxSEXP, SEXP cySEXP, SEXP exponentSEXP, SEXP escapeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -25,7 +25,7 @@ END_RCPP
 }
 // julia
 Rcpp::List julia(std::complex<double> c, unsigned dim, unsigned maxIter, long double R, long double cx, long double cy, long double exponent, double escape);
-RcppExport SEXP _fractal_julia(SEXP cSEXP, SEXP dimSEXP, SEXP maxIterSEXP, SEXP RSEXP, SEXP cxSEXP, SEXP cySEXP, SEXP exponentSEXP, SEXP escapeSEXP) {
+RcppExport SEXP _fractalr_julia(SEXP cSEXP, SEXP dimSEXP, SEXP maxIterSEXP, SEXP RSEXP, SEXP cxSEXP, SEXP cySEXP, SEXP exponentSEXP, SEXP escapeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -43,12 +43,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_fractal_mandelbrot", (DL_FUNC) &_fractal_mandelbrot, 7},
-    {"_fractal_julia", (DL_FUNC) &_fractal_julia, 8},
+    {"_fractalr_mandelbrot", (DL_FUNC) &_fractalr_mandelbrot, 7},
+    {"_fractalr_julia", (DL_FUNC) &_fractalr_julia, 8},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_fractal(DllInfo *dll) {
+RcppExport void R_init_fractalr(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

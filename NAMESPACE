@@ -2,6 +2,8 @@
 
 export(ui)
 import(Rcpp)
-import(methods)
 importFrom(graphics,image)
-useDynLib(fractal, .registration=TRUE)
+importFrom(viridis,inferno)
+importFrom(viridis,plasma)
+importFrom(viridis,viridis)
+useDynLib(fractalr, .registration=TRUE)

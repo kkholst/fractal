@@ -44,12 +44,12 @@ server <- function(input, output, session) {
 
     calculate <- function() {
         if (tolower(input$type)=="mandelbrot") {
-            tt <- system.time(res <- fractal:::.mandelbrot(cx=values$x, cy=values$y,
+            tt <- system.time(res <- fractalr:::.mandelbrot(cx=values$x, cy=values$y,
                                                 dim=600, maxIter=input$maxIter,
                                                 R=values$R))
         } else {
             cval <- complex(1,input$c_re_input, input$c_im_input)
-            tt <- system.time(res <-  fractal:::.julia(c=cval,
+            tt <- system.time(res <-  fractalr:::.julia(c=cval,
                                            cx=values$x, cy=values$y,
                                            dim=600, maxIter=input$maxIter,
                                            R=values$R))
