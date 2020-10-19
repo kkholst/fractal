@@ -9,7 +9,7 @@ Description: Visualize simple fractals in R
 URL: https://github.com/kkholst/fractalr
 BugReports: https://github.com/kkholst/fractalr/issues
 License: Apache License (== 2.0)
-Imports: Rcpp (>= 1.0), shiny, viridis
+Imports: Rcpp (>= 1.0), shiny, viridisLite
 Suggests: testthat (>= 0.11)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.1.1

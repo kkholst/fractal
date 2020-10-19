@@ -6,7 +6,7 @@
 ##' @name fractalr-package
 ##' @import Rcpp
 ##' @importFrom graphics image
-##' @importFrom viridis viridis plasma inferno
+##' @importFrom viridisLite viridis plasma inferno
 ##' @useDynLib fractalr, .registration=TRUE
 ##' @aliases fractalr-package fractalr
 ##' @docType package

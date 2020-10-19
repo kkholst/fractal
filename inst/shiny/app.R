@@ -31,7 +31,7 @@ ui <- fluidPage(
             selectInput("color", "Color scheme",
                         choices=c("inferno", "plasma", "viridis",
                                   "heat", "topo", "rainbow")),
-            sliderInput("maxIter", "Iterations", min=10, max=20000, value=1000),
+            sliderInput("maxIter", "Iterations", min=10, max=6000, value=1000),
             sliderInput("lambda", "Zoom factor", min=-10, max=10, value=4),
             p(textOutput("info")),
             radioButtons("type", "Fractal", choices=c("Mandelbrot", "Julia")),
@@ -132,9 +132,9 @@ server <- function(input, output, session) {
         par(mar=c(0,0,0,0))
         res <- updateSet()
         cols <- switch(input$color,
-                       inferno=viridis::inferno(256, direction=-1),
-                       viridis=viridis::viridis(256, direction=-1),
-                       plasma=viridis::plasma(256, direction=-1),
+                       inferno=viridisLite::inferno(256, direction=-1),
+                       viridis=viridisLite::viridis(256, direction=-1),
+                       plasma=viridisLite::plasma(256, direction=-1),
                        rainbow=rev(rainbow(256)),
                        heat=rev(heat.colors(256)),
                        topo=rev(topo.colors(256))
